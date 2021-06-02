@@ -41,7 +41,7 @@
   <p align="center">
     A Part of Kotlite Ridesharing Application
     <br />
-    <a href="#"><strong>Explore the Projects »</strong></a>
+    <a href="https://github.com/dzaarsyd/B21-CAP0176"><strong>Explore the Projects »</strong></a>
     <br />
     <br />
     <!-- <a href="https://github.com/github_username/repo_name">Download Apk</a>
@@ -70,7 +70,7 @@
       </ul>
     </li>
     <li><a href="#dataset">Dataset</a></li>
-    <li><a href="#source">Source</a></li>
+    <li><a href="#source-articles-and-journals">Source Articles and Journals</a></li>
     <li>
       <a href="#dataset">Algorithm Explanation</a>
       <ul>
@@ -84,6 +84,7 @@
     <li><a href="#contributing">Contributing</a></li>
     <li><a href="#license">License</a></li>
     <li><a href="#contact">Contact</a></li>
+    <li><a href="#other-project">Other Project</a></li>
     <li><a href="#acknowledgements">Acknowledgements</a></li>
   </ol>
 </details>
@@ -164,12 +165,11 @@ This project requires several resources to be prepared and installed on the loca
 
   We use the KWB Dummy Taxi dataset to test the algorithm we use. We created this dataset because we feel that the data in the NYC Trip Distance matrix dataset is still insufficient to support our system. so we create our dataset to get the data we want.
 
-
-## Source
+## Source Articles and Journals
 
 - [Ridesharing Matching Algorithm](https://www.sciencedirect.com/science/article/pii/S2352146516308730)
 - [Lyft Matchmaking](https://eng.lyft.com/matchmaking-in-lyft-line-9c2635fe62c4#.tac6tkgo7)
-- [link jurnal 3]()
+- [Nearest Neighbor](https://towardsdatascience.com/machine-learning-basics-with-the-k-nearest-neighbors-algorithm-6a6e71d01761#:~:text=KNN%20works%20by%20finding%20the,in%20the%20case%20of%20regression)
 
 ## Algorithm Explanation
 
@@ -195,7 +195,6 @@ Distance-based Filtering is the process we use to make our drivers feel free. It
 
 We test the algorithm that we have built using the dataset [KWB Dummy Taxi Dataset](https://raw.githubusercontent.com/kroniz-utab/kotlite_algorithm/master/datasets/kotlite_driver_dataset_KWB_with_ket.csv) using the data
 passengers who want to depart from MAN 1 Kota Batu on `(-7.8838611,112.5381295)` to GOR Gajah Mada Kota Batu on `(-7.8786821,112.524145)`.
-
 
 ![result pict](assets/result.png)
 
@@ -229,7 +228,11 @@ Distributed under the MIT License. See `LICENSE.md` for more information.
 
 ## Contact
 
-How can we help you? While we're occupied for the Capstone Project, there are simpler ways for us to get in touch! Please do visit us at
+How can we help you? While we're occupied for the Capstone Project, there are simpler ways for us to get in touch! Please do visit us at [here](https://github.com/dzaarsyd/B21-CAP0176#team-members).
+
+## Other Project
+
+You can also looking up our other repository in this project by this [**link**](https://github.com/dzaarsyd/B21-CAP0176).
 
 <!-- ACKNOWLEDGEMENTS -->
 
