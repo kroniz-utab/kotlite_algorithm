@@ -33,7 +33,7 @@
 
   <p align="center">
     <img src="https://img.shields.io/badge/Team-Brillante-9e83fc">
-    <img src="https://img.shields.io/badge/ID-BA21_CAP0176-9e83fc?">
+    <img src="https://img.shields.io/badge/ID-B21_CAP0176-9e83fc?">
   </p>
 
   <h3 align="center">Kotlite (Angkot Elite) Matching Algorithm</h3>
@@ -96,7 +96,7 @@ Kotlite is here as a breakthrough idea that answers the need of users to find dr
 
 <!-- ini bagian teknisnya -->
 
-Kami menggunakan pendekatan Machine Learning untuk memberikan penumpang, rekomendasi driver yang memiliki jalur yang sama. Dengan menggunakan sistem rekomendasi yang kami buat, sistem akan memberikan penumpang rekomendasi driver yang akan melakukan perjalanan yang melewati lokasi pickup penumpang serta melewati atau menuju lokasi dropoff penumpang. Pada sistem rekomendasi ini, kami menggunakan pendekatan location-based filtering, similar direction approaching, pickup time filtering, dan distance-based filtering.
+We use the Machine Learning approach to provide passenger, driver recommendations who have the same route. By using the recommendation system that we created, the system will offer passengers with recommendations for drivers who will travel past the passenger pickup location and through or to the passenger dropoff location. In this recommendation system, we use a location-based filtering approach, similar direction approaching, pickup time filtering, and distance-based filtering.
 
 ### Built With
 
@@ -113,7 +113,7 @@ To get a local copy up and running follow these simple steps.
 
 ### Prerequisites
 
-this project requires several resources to be prepared and installed on the local computer, including:
+This project requires several resources to be prepared and installed on the local computer, including:
 
 - [Python Virtual Environtment](https://www.python.org/downloads/) (recommendation)
 - [Python ver 3.6.x - 3.8.x](https://www.python.org/downloads/) (we use python version 3.8.5)
@@ -130,7 +130,7 @@ this project requires several resources to be prepared and installed on the loca
    $ cd kotlite_algorithm
    ```
 
-2. Install the required environment with virtualenv **(recommendation)**. This part is for run on local computer
+2. Install the required environment with virtualenv **(recommendation)**. This part is for a run on local computer
 
    - Linux/macOs
      ```sh
@@ -145,13 +145,13 @@ this project requires several resources to be prepared and installed on the loca
      pip install -r requirements.txt
      ```
 
-3. For local computer you can run this project using jupyter notebook by this way in your CLI
+3. For the local computer, you can run this project using jupyter notebook by this way in your CLI
 
    ```sh
    $ jupyter notebook
    ```
 
-4. Setup `Maps API`, if you found `API KEY` on notebook, change it by your Google Maps API Key.
+4. Setup `Maps API`, if you found `API KEY` on the notebook, change it by your Google Maps API Key.
 
 5. And you can explore how our algorithm was built.
 
@@ -162,7 +162,8 @@ this project requires several resources to be prepared and installed on the loca
 - [NYC Trip Distance Matrix](https://www.kaggle.com/debanjanpaul/new-york-city-taxi-trip-distance-matrix)
 - [KWB Dummy Taxi Dataset](https://raw.githubusercontent.com/kroniz-utab/kotlite_algorithm/master/datasets/kotlite_driver_dataset_KWB_with_ket.csv)
 
-  Dataset KWB Dummy Taxi Dataset kami gunakan untuk melakukan testing terhadap algoritma yang kami gunakan. Kami membuat dataset ini karena kami merasa data yang ada pada dataset NYC Trip Distance matrix masih sangat kurang untuk mendukung sistem kami. sehingga kami membuat dataset kami sendiri untuk mendapatkan data yang kami inginkan.
+  We use the KWB Dummy Taxi dataset to test the algorithm we use. We created this dataset because we feel that the data in the NYC Trip Distance matrix dataset is still insufficient to support our system. so we create our dataset to get the data we want.
+
 
 ## Source
 
@@ -172,50 +173,51 @@ this project requires several resources to be prepared and installed on the loca
 
 ## Algorithm Explanation
 
-Sistem rekomendasi kami bekerja dengan menggunakan berbagai macam pendekatan untuk mendapatkan hasil rekomendasi yang paling baik menurut kami. Tujuan dari sistem rekomendasi ini adalah untuk mendapatkan driver yang paling mirip tujuan, arah, dan rute. Sistem rekomendasi kami menggunakan basis Nearest Neighbor Algorithm. Alasan kami menggunakan nearest neighbor algorithm adalah data yang kami himpun (gather) adalah data realtime atau crowdsourcing, sehingga kami membutuhkan untuk melakukan training terus menerus ketika penumpang menginginkan rekomendasi driver. Alasan inilah yang membuat kami memilih algoritma nearest neighbor untuk sistem kami. Sistem rekomendasi kami tidak hanya mengandalkan algoritma nearest neighbor saja, akan tetapi kami juga melakukan beberapa pendekatan agar penumpang mendapatkan rekomendasi driver yang bagus, serta driver tidak harus menempuh jarak yang terlalu jauh untuk menjemput atau mengantar penumpang.
+Our recommendation system works using variations of approaches to get the best recommendation results based on our opinion. The purpose of this recommendation system is to find drivers that most closely match destinations, directions, and routes. Our recommendation system is based on the Nearest Neighbor Algorithm. The reason we use the nearest neighbor algorithm is that we gather real-time data or to be called crowdsourcing. In that case, we need to do continuous training when passengers want driver recommendations. Our recommendation system does not only rely on the nearest neighbor algorithm, but we also take several approaches so that passengers get good driver recommendations, and drivers do not have to travel too far to pick up or drop off passengers.
 
 ### Location-based Filtering
 
-Location-based Filtering merupakan pendekatan paling utama yang kami gunakan. Pendekatan ini menggunakan Algoritma Nearest Neighbour untuk mendeteksi titik rute terdekat dari seluruh data perjalanan driver terhadap titik pickup dan drop off penumpang. Titik terdekat inilah yang akan digunakan untuk pendekatan lainnya.
+Location-based Filtering is the main approach of what we use. This approach uses the Nearest Neighbor Algorithm to detect the closest route point from all driver trip data to the pickup and drop-off points of passengers. This closest point will be used for other approaches.
 
 ### Similar Direction Approach
 
-Similar Direction Approach merupakan pendekatan yang kami gunakan untuk menentukan apakah driver memiliki arah perjalanan yang sama. Kami menggunakan driver sequence route data untuk melihat apakah driver berada pada similar direction atau tidak.
+Similar Direction Approach is the approach we use to determine whether drivers have the same direction of travel. We use the driver sequence route data to see if the drivers are in a similar direction or not.
 
 ### Pickup Time Filtering
 
-Pickup Time Filtering merupakan pendekatan yang kami gunakan untuk memberikan rekomendasi driver kepada penumpang berdasarkan waktu pickup yang diinginkan oleh penumpang. Untuk mendapatkan rekomendasi paling baik kami menggunakan pickup time filtering sebagai salah satu pendekatan dalam sistem rekomendasi kami.
+Pickup Time Filtering is the approach we use to provide driver recommendations to passengers based on the passenger's desired pickup time. To get the best recommendation, we use pickup time filtering as one of the approaches in our recommendation system.
 
 ### Distance-based Filtering
 
-Distance-based Filtering adalah proses yang kami gunakan untuk membuat driver kami tidak merasa rugi. Distance-based Filtering digunakan untuk mencari nilai distance dari titik lokasi terdekat driver terhadap titik pickup dan dropoff penumpang. Kami menggunakan pendekatan ini untuk membatasi cakupan jarak yang harus ditempuh oleh pengemudi untuk menjemput dan mengantar penumpang terhadap rute utama yang harusnya ditempuh oleh pengemudi.
+Distance-based Filtering is the process we use to make our drivers feel free. It is practical to find the distance value from the driver's closest location point to the passenger's pickup and dropoff point. We use this approach to limit the range of distances a driver must travel to pick up and drop off passengers on the main route the driver must take.
 
 ## Result of Testing
 
-Kami melakukan test algoritma yang telah kami bangun dengan menggunakan dataset [KWB Dummy Taxi Dataset](https://raw.githubusercontent.com/kroniz-utab/kotlite_algorithm/master/datasets/kotlite_driver_dataset_KWB_with_ket.csv) dengan menggunakan data
+We test the algorithm that we have built using the dataset [KWB Dummy Taxi Dataset](https://raw.githubusercontent.com/kroniz-utab/kotlite_algorithm/master/datasets/kotlite_driver_dataset_KWB_with_ket.csv) using the data
 passengers who want to depart from MAN 1 Kota Batu on `(-7.8838611,112.5381295)` to GOR Gajah Mada Kota Batu on `(-7.8786821,112.524145)`.
+
 
 ![result pict](assets/result.png)
 
-By using a threshold of 0.7 km from the nearest point, the system recommends 2 drivers who have a similar route, namely the driver with id `[11,19]`. We're trying to see how effective the system is at providing driver recommendations to passengers. in this case we want to test using google maps to see and assess how effective this system is. The testing process uses a scenario that the driver will pick up passengers and then deliver them first before the driver goes to his final destination.
+By using a threshold of 0.7 km from the nearest point, the system recommends 2 drivers who have a similar route, namely the driver with id `[11,19]`. We're trying to see how effective the system is at providing driver recommendations to passengers. In this case, we want to test using google maps to see and assess how effective this system is. The testing process uses a scenario that the driver will pick up passengers and then deliver them first before the driver goes to his final destination.
 
 ![driver_id 11 routes](assets/driver_11_routes.png)
 
-<p align="center">Gambar rute utama yang seharusnya ditempuh oleh pengemudi dengan id 11</p>
+<p align="center">Image of the main route the driver should have taken with ID 11</p>
 
 ![driver_id 11 with passanger routes](assets/Driver11_with_pass.png)
 
-<p align="center">Gambar rute pengemudi yang harus menjemput dan mengantar penumpang</p>
+<p align="center">Image of the route of the driver who has to pick up and drop off passengers</p>
 
-however, if the driver with ID 11 picks up passengers and delivers them to the passenger's destination, the distance covered will be 12.5 km with an estimated travel time of 28 minutes. It is good enough, that the system can search for and recommend drivers who have the same direction to passengers. The results of the recommendations are also not burdensome or detrimental to drivers, because the maximum pick-up distance is limited to 0.7 Km from the point provided by the maps.
+However, if the driver with ID 11 picks up passengers and delivers them to the passenger's destination, the distance covered will be 12.5 km with an estimated travel time of 28 minutes. It is nice that the system can search for and recommend drivers who have the same direction to passengers. The results of the recommendations are also not burdensome or detrimental to drivers because the maximum pick-up distance is limited to 0.7 km from the point provided by the maps.
 
 <!-- CONTRIBUTING -->
 
 ## Contributing
 
-Feel free to clone, use, and contribute back via [pull request](https://docs.github.com/en/github/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-pull-requests). We'd love to see your pull requests and sent them in! Please use the [issues tracker](https://github.com/kroniz-utab/kotlite_algorithm/issues) to raise bug reports and feature request.
+Feel free to clone, use, and contribute back via [pull request](https://docs.github.com/en/github/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-pull-requests). We'd love to see your pull requests and send them in! Please use the [issues tracker](https://github.com/kroniz-utab/kotlite_algorithm/issues) to raise bug reports and feature requests.
 
-We are excited to see what amazing feature you build in your application using this project. Do ping us at our [contact](#contact) once you build one, feel free to contact us, and we would love to feature your app on our blog.
+We are excited to see the amazing features you build in your application using this project. Do ping us at our [contact](#contact) once you build one, feel free to contact us, and we would love to feature your app on our blog.
 
 <!-- LICENSE -->
 
@@ -227,7 +229,7 @@ Distributed under the MIT License. See `LICENSE.md` for more information.
 
 ## Contact
 
-_Nanti nyambung ke portal, bikin kata2 kurang lebih jika ingin menghubungi kami silahkan lihat di link berikut_
+How can we help you? While we're occupied for the Capstone Project, there are simpler ways for us to get in touch! Please do visit us at
 
 <!-- ACKNOWLEDGEMENTS -->
 
