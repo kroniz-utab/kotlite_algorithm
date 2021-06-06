@@ -41,7 +41,7 @@
   <p align="center">
     A Part of Kotlite Ridesharing Application
     <br />
-    <a href="https://github.com/dzaarsyd/B21-CAP0176"><strong>Explore the Projects »</strong></a>
+    <a href="https://github.com/dzaarsyd/B21-CAP0176" target="_blank"><strong>Explore the Projects »</strong></a>
     <br />
     <br />
     <!-- <a href="https://github.com/github_username/repo_name">Download Apk</a>
@@ -222,7 +222,7 @@ We are excited to see the amazing features you build in your application using t
 
 ## License
 
-Distributed under the MIT License. See `LICENSE.md` for more information.
+Distributed under the MIT License. See `LICENSE.txt` for more information.
 
 <!-- CONTACT -->
 
